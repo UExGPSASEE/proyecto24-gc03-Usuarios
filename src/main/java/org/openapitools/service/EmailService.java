@@ -26,7 +26,7 @@ public class EmailService {
     private String fromEmail;
 
     public void sendPasswordResetEmail(String toEmail, String token) throws EmailException {
-        String resetUrl = "http://localhost:3000/streamhub/reset-password?token=" + token;
+        String resetUrl = "http://gui:8080/streamhub/reset-password?token=" + token;
 
         Email email = new SimpleEmail();
         email.setHostName(host);
